@@ -7,7 +7,7 @@ const { isAuthenticated, restrictTo } = require("../utils/middlewares")
 router.post("/", isAuthenticated, async (req, res, next) => {
 
     try {
-        const response = await bookingControllers.create(req.body, req.user)
+        const response = await bookingControllers.create2(req.body, req.user)
 
         res.json(response)
 
